@@ -1,4 +1,7 @@
-year = 2000
+year = input("WHEN did you come from? ")
+type(year)
+year = int(year)
+# probably there's a way to test if it's an integer. Google it.
 
 def greetings():
     if year < 1900:
