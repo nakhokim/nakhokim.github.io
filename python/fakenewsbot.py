@@ -21,7 +21,6 @@ for item in urls:
 
 #convert list to str to save to file with write method
 str1 = ''.join(corpus_texts)
-
 with open('junk.txt', 'w') as f:
     f.write(str1)
 
@@ -32,7 +31,7 @@ person1 = input("Who is in the news? ")
 person1 = str(person1)
 person2 = input("Who else is in it? ")
 person2 = str(person2)
-length = input("How long? ")
+length = input("How many words? ")
 length = int(length)
 
 def title():
@@ -53,7 +52,10 @@ text = open_file_and_get_text(filename)
 def main_body():
     # text_word=text.split()    :: want to make it in word
     rand_seg = random.randint(1,5000)
-    print (text[rand_seg:(rand_seg+length)])
+    text2 = text.split(" ")
+    text3 = text2[rand_seg:(rand_seg+length)]
+    text4 = ' '.join(text3)
+    print (text4)
 
 # The outputs
 title()
